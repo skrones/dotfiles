@@ -1,3 +1,53 @@
 #!/bin/bash
 #chezmoi:template:
-dconf load /org/gnome/ < {{ .chezmoi.homeDir }}/.config/dconf/gnome.dconf
+set -u
+
+gnome_dconf_file="{{ .chezmoi.homeDir }}/.config/dconf/gnome.dconf"
+
+if ! command -v dconf >/dev/null 2>&1; then
+	echo "dconf is not installed or is not in PATH" >&2
+	exit 1
+fi
+
+if [[ ! -r "$gnome_dconf_file" ]]; then
+	echo "GNOME dconf dump not found: $gnome_dconf_file" >&2
+	exit 1
+fi
+
+section=
+applied_count=0
+skipped_count=0
+
+while IFS= read -r line || [[ -n "$line" ]]; do
+	case "$line" in
+		""|\#*)
+			continue
+			;;
+		\[*\])
+			section=${line#\[}
+			section=${section%\]}
+			;;
+		*=*)
+			if [[ -z "$section" ]]; then
+				continue
+			fi
+
+			key=${line%%=*}
+			value=${line#*=}
+			dconf_path="/org/gnome/$section/$key"
+
+			if dconf write "$dconf_path" "$value"; then
+				applied_count=$((applied_count + 1))
+			else
+				echo "warning: skipped locked or non-writeable GNOME dconf key: $dconf_path" >&2
+				skipped_count=$((skipped_count + 1))
+			fi
+			;;
+	esac
+done < "$gnome_dconf_file"
+
+echo "Applied $applied_count GNOME dconf keys"
+
+if (( skipped_count > 0 )); then
+	echo "Skipped $skipped_count locked or non-writeable GNOME dconf keys" >&2
+fi
