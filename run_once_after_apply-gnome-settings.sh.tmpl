@@ -1,5 +1,3 @@
 #!/bin/bash
 #chezmoi:template:
-dconf load /org/gnome/desktop/ < {{ .chezmoi.homeDir }}/.config/dconf/gnome-desktop.dconf
-dconf load /org/gnome/shell/ < {{ .chezmoi.homeDir }}/.config/dconf/gnome-shell.dconf
-dconf load /org/gnome/settings-daemon/plugins/media-keys/ < {{ .chezmoi.homeDir }}/.config/dconf/media-keys.dconf
+dconf load /org/gnome/ < {{ .chezmoi.homeDir }}/.config/dconf/gnome.dconf
