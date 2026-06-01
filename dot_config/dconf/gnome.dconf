@@ -5,7 +5,7 @@ window-size=(1024, 768)
 [Ptyxis]
 default-profile-uuid='bf3e61dec444f906cfe5f81d69f8082a'
 profile-uuids=['bf3e61dec444f906cfe5f81d69f8082a']
-window-size=(uint32 136, uint32 29)
+window-size=(uint32 105, uint32 49)
 
 [calculator]
 base=10
@@ -22,7 +22,7 @@ window-maximized=true
 window-size=(768, 600)
 
 [control-center]
-last-panel='sound'
+last-panel='display'
 window-state=(980, 640, false)
 
 [desktop/a11y/magnifier]
@@ -63,16 +63,24 @@ duration-seconds=uint32 300
 interval-seconds=uint32 1800
 play-sound=true
 
+[desktop/calendar]
+show-weekdate=false
+
 [desktop/input-sources]
 current=uint32 0
 sources=[('xkb', 'us')]
 
 [desktop/interface]
+accent-color='slate'
+clock-format='24h'
+clock-show-seconds=false
+clock-show-weekday=true
 color-scheme='prefer-dark'
+enable-animations=true
 toolkit-accessibility=false
 
 [desktop/notifications]
-application-children=['org-gnome-software', 'org-gnome-ptyxis', 'org-gnome-nautilus', 'org-mozilla-firefox', 'gnome-power-panel', 'gnome-about-panel', 'code', 'de-haeckerfelix-fragments', 'qdmr']
+application-children=['org-gnome-software', 'org-gnome-ptyxis', 'org-gnome-nautilus', 'org-mozilla-firefox', 'gnome-power-panel', 'gnome-about-panel', 'code', 'de-haeckerfelix-fragments', 'qdmr', 'org-gnome-shell-extensions-gsconnect-preferences', 'org-gnome-shell-extensions-gsconnect']
 
 [desktop/notifications/application/code]
 application-id='code.desktop'
@@ -91,6 +99,12 @@ application-id='org.gnome.Nautilus.desktop'
 
 [desktop/notifications/application/org-gnome-ptyxis]
 application-id='org.gnome.Ptyxis.desktop'
+
+[desktop/notifications/application/org-gnome-shell-extensions-gsconnect-preferences]
+application-id='org.gnome.Shell.Extensions.GSConnect.Preferences.desktop'
+
+[desktop/notifications/application/org-gnome-shell-extensions-gsconnect]
+application-id='org.gnome.Shell.Extensions.GSConnect.desktop'
 
 [desktop/notifications/application/org-gnome-software]
 application-id='org.gnome.Software.desktop'
@@ -127,6 +141,17 @@ idle-delay=uint32 0
 [desktop/wm/preferences]
 button-layout='appmenu:minimize,maximize,close'
 
+[gnome-system-monitor]
+maximized=false
+show-dependencies=false
+show-whose-processes='user'
+window-height=720
+window-width=800
+
+[gnome-system-monitor/proctree]
+col-26-visible=false
+col-26-width=0
+
 [login-screen]
 enable-fingerprint-authentication=true
 enable-smartcard-authentication=false
@@ -140,9 +165,9 @@ default-folder-viewer='list-view'
 migrated-gtk-settings=true
 
 [nautilus/window-state]
-initial-size=(890, 550)
+initial-size=(1605, 965)
 initial-size-file-chooser=(890, 550)
-maximized=true
+maximized=false
 
 [papers]
 document-directory=@ms '/home/skrones/Downloads'
@@ -185,12 +210,150 @@ donation-reminder-last-shown=int64 1777874782968212
 sleep-inactive-ac-type='nothing'
 
 [shell]
-app-picker-layout=[{'org.gnome.Contacts.desktop': <{'position': <0>}>, 'org.fedoraproject.MediaWriter.desktop': <{'position': <1>}>, 'org.gnome.Weather.desktop': <{'position': <2>}>, 'org.gnome.clocks.desktop': <{'position': <3>}>, 'org.gnome.Maps.desktop': <{'position': <4>}>, 'org.gnome.SimpleScan.desktop': <{'position': <5>}>, 'libreoffice-calc.desktop': <{'position': <6>}>, 'org.gnome.Settings.desktop': <{'position': <7>}>, 'org.gnome.Boxes.desktop': <{'position': <8>}>, 'org.gnome.Showtime.desktop': <{'position': <9>}>, 'org.gnome.Snapshot.desktop': <{'position': <10>}>, 'org.gnome.Characters.desktop': <{'position': <11>}>, 'Utilities': <{'position': <12>}>, 'System': <{'position': <13>}>, 'libreoffice-impress.desktop': <{'position': <14>}>, 'org.gnome.Tour.desktop': <{'position': <15>}>, 'org.gnome.Yelp.desktop': <{'position': <16>}>, 'libreoffice-writer.desktop': <{'position': <17>}>, 'org.gnome.Ptyxis.desktop': <{'position': <18>}>}]
+app-picker-layout=[{'org.gnome.Contacts.desktop': <{'position': <0>}>, 'org.fedoraproject.MediaWriter.desktop': <{'position': <1>}>, 'org.gnome.Weather.desktop': <{'position': <2>}>, 'org.gnome.clocks.desktop': <{'position': <3>}>, 'org.gnome.Maps.desktop': <{'position': <4>}>, 'org.gnome.SimpleScan.desktop': <{'position': <5>}>, 'libreoffice-calc.desktop': <{'position': <6>}>, 'org.gnome.Settings.desktop': <{'position': <7>}>, 'org.gnome.Boxes.desktop': <{'position': <8>}>, 'org.gnome.Showtime.desktop': <{'position': <9>}>, 'org.gnome.Snapshot.desktop': <{'position': <10>}>, 'org.gnome.Characters.desktop': <{'position': <11>}>, 'Utilities': <{'position': <12>}>, 'System': <{'position': <13>}>, 'libreoffice-impress.desktop': <{'position': <14>}>, 'org.gnome.Tour.desktop': <{'position': <15>}>, 'org.gnome.Yelp.desktop': <{'position': <16>}>, 'libreoffice-writer.desktop': <{'position': <17>}>, 'org.gnome.Ptyxis.desktop': <{'position': <18>}>, 'com.calibre_ebook.calibre.desktop': <{'position': <19>}>, 'de.haeckerfelix.Fragments.desktop': <{'position': <20>}>, 'org.freecad.FreeCAD.desktop': <{'position': <21>}>, 'org.gabmus.hydrapaper.desktop': <{'position': <22>}>, 'org.inkscape.Inkscape.desktop': <{'position': <23>}>}, {'net.cozic.joplin_desktop.desktop': <{'position': <0>}>, 'org.kde.krita.desktop': <{'position': <1>}>, 'com.logseq.Logseq.desktop': <{'position': <2>}>, 'net.code-industry.masterpdfeditor5.desktop': <{'position': <3>}>, 'org.onlyoffice.desktopeditors.desktop': <{'position': <4>}>, 'org.qbittorrent.qBittorrent.desktop': <{'position': <5>}>, 'qdmr.desktop': <{'position': <6>}>, 'remote-viewer.desktop': <{'position': <7>}>, 'com.transmissionbt.Transmission.desktop': <{'position': <8>}>, 'org.gnome.tweaks.desktop': <{'position': <9>}>, 'virt-manager.desktop': <{'position': <10>}>, 'code.desktop': <{'position': <11>}>, 'com.github.xournalpp.xournalpp.desktop': <{'position': <12>}>, 'org.audacityteam.Audacity.desktop': <{'position': <13>}>, 'org.blender.Blender.desktop': <{'position': <14>}>, 'org.darktable.Darktable.desktop': <{'position': <15>}>, 'com.mattjakeman.ExtensionManager.desktop': <{'position': <16>}>, 'org.gnome.Extensions.desktop': <{'position': <17>}>, 'com.github.tchx84.Flatseal.desktop': <{'position': <18>}>, 'org.gimp.GIMP.desktop': <{'position': <19>}>, 'org.kde.kdenlive.desktop': <{'position': <20>}>, 'org.localsend.localsend_app.desktop': <{'position': <21>}>, 'org.musescore.MuseScore.desktop': <{'position': <22>}>}, {'com.obsproject.Studio.desktop': <{'position': <0>}>, 'steam.desktop': <{'position': <1>}>, 'org.torproject.torbrowser-launcher.desktop': <{'position': <2>}>, 'org.torproject.torbrowser-launcher.settings.desktop': <{'position': <3>}>, 'org.videolan.VLC.desktop': <{'position': <4>}>, 'org.gnome.Calendar.desktop': <{'position': <5>}>, 'org.gnome.Software.desktop': <{'position': <6>}>, 'org.gnome.TextEditor.desktop': <{'position': <7>}>, 'org.gnome.Calculator.desktop': <{'position': <8>}>}]
+command-history=['r', 'R']
+disabled-extensions=['background-logo@fedorahosted.org', 'CustomizeClockOnLockScreen@pratap.fastmail.fm']
+enabled-extensions=['lockscreen-extension@pratap.fastmail.fm', 'live-lockscreen@nick-redwill', 'Vitals@CoreCoding.com', 'blur-my-shell@aunetx', 'dash-to-dock@micxgx.gmail.com', 'just-perfection-desktop@just-perfection', 'display-configuration-switcher@knokelmaat.gitlab.com', 'gsconnect@andyholmes.github.io']
+favorite-apps=['org.mozilla.firefox.desktop', 'org.gnome.Nautilus.desktop', 'md.obsidian.Obsidian.desktop']
 last-selected-power-profile='performance'
 welcome-dialog-last-shown-version='50.0'
 
 [shell/app-switcher]
 current-workspace-only=true
+
+[shell/extensions/blur-my-shell]
+pipelines={'pipeline_default': {'name': <'Default'>, 'effects': <[<{'type': <'native_static_gaussian_blur'>, 'id': <'effect_000000000000'>, 'params': <{'radius': <30>, 'brightness': <0.59999999999999998>}>}>]>}, 'pipeline_default_rounded': {'name': <'Default rounded'>, 'effects': <[<{'type': <'native_static_gaussian_blur'>, 'id': <'effect_000000000001'>, 'params': <{'radius': <30>, 'brightness': <0.59999999999999998>, 'unscaled_radius': <0>}>}>, <{'type': <'corner'>, 'id': <'effect_000000000002'>, 'params': <{'radius': <24>}>}>]>}, 'pipeline_56313180880275': {'name': <'Panel Blur'>, 'effects': <[<{'type': <'native_static_gaussian_blur'>, 'id': <'effect_25761812810922'>, 'params': <{'brightness': <0.28999999999999998>}>}>]>}, 'pipeline_21503580687335': {'name': <'Application Blur'>, 'effects': <[<{'type': <'native_static_gaussian_blur'>, 'id': <'effect_46905429752899'>, 'params': <{'unscaled_radius': <2>, 'brightness': <0.59999999999999998>}>}>]>}, 'pipeline_95596229895594': {'name': <'Lockscreen Blur'>, 'effects': <@av []>}, 'pipeline_26450599173613': {'name': <'Alt-Tab Blur'>, 'effects': <[<{'type': <'native_static_gaussian_blur'>, 'id': <'effect_90178805501666'>, 'params': <@a{sv} {}>}>]>}}
+rounded-blur-found=true
+settings-version=2
+
+[shell/extensions/blur-my-shell/appfolder]
+style-dialogs=1
+
+[shell/extensions/blur-my-shell/applications]
+blur=true
+blur-on-overview=false
+corner-when-maximized=true
+enable-all=true
+opacity=248
+pipeline='pipeline_21503580687335'
+static-blur=false
+
+[shell/extensions/blur-my-shell/coverflow-alt-tab]
+pipeline='pipeline_26450599173613'
+
+[shell/extensions/blur-my-shell/dash-to-dock]
+blur=true
+brightness=0.94999999999999996
+override-background=true
+pipeline='pipeline_default_rounded'
+sigma=27
+static-blur=false
+style-dash-to-dock=0
+
+[shell/extensions/blur-my-shell/lockscreen]
+pipeline='pipeline_95596229895594'
+
+[shell/extensions/blur-my-shell/overview]
+pipeline='pipeline_default'
+style-components=2
+
+[shell/extensions/blur-my-shell/panel]
+blur=true
+pipeline='pipeline_56313180880275'
+
+[shell/extensions/blur-my-shell/screenshot]
+pipeline='pipeline_default'
+
+[shell/extensions/customize-clock-on-lockscreen]
+time-font-color='rgba(255, 255, 255, 1)'
+
+[shell/extensions/dash-to-dock]
+background-opacity=0.80000000000000004
+dash-max-icon-size=46
+dock-fixed=false
+dock-position='BOTTOM'
+height-fraction=0.90000000000000002
+hide-tooltip=true
+icon-size-fixed=false
+intellihide=false
+intellihide-mode='ALL_WINDOWS'
+multi-monitor=true
+preferred-monitor=-2
+preferred-monitor-by-connector='HDMI-1'
+preview-size-scale=0.0
+show-mounts=false
+show-mounts-only-mounted=false
+
+[shell/extensions/gsconnect]
+devices=['a8e0ea01153d4d1cad7fad0015e7f07e']
+enabled=true
+missing-openssl=false
+name='sam-desktop'
+show-indicators=false
+
+[shell/extensions/gsconnect/device/a8e0ea01153d4d1cad7fad0015e7f07e]
+certificate-pem='-----BEGIN CERTIFICATE-----\nMIIBijCCATGgAwIBAgIBATAKBggqhkjOPQQDBDBPMSkwJwYDVQQDDCBhOGUwZWEw\nMTE1M2Q0ZDFjYWQ3ZmFkMDAxNWU3ZjA3ZTEUMBIGA1UECwwLS0RFIENvbm5lY3Qx\nDDAKBgNVBAoMA0tERTAeFw0yNTA1MzEwNTAwMDBaFw0zNjA1MzEwNTAwMDBaME8x\nKTAnBgNVBAMMIGE4ZTBlYTAxMTUzZDRkMWNhZDdmYWQwMDE1ZTdmMDdlMRQwEgYD\nVQQLDAtLREUgQ29ubmVjdDEMMAoGA1UECgwDS0RFMFkwEwYHKoZIzj0CAQYIKoZI\nzj0DAQcDQgAE2xYYBYgwbuT30/ragSOLwAcTN16AelJLLzKUHAevjXPuNTxr7lWw\nyX13WSR280dUkspfo+RSTr9z/JvaDi6pMjAKBggqhkjOPQQDBANHADBEAiB1gZGz\nrfUv2CI5bSfpl6gXssoZayfmLQnnjTjsel1mNgIgJt0EWw+h2D8FsNVv4+T0Jmu/\nmlJzg7s+m474PZHS0M8=\n-----END CERTIFICATE-----\n'
+incoming-capabilities=['kdeconnect.battery', 'kdeconnect.clipboard', 'kdeconnect.clipboard.connect', 'kdeconnect.contacts.request_all_uids_timestamps', 'kdeconnect.contacts.request_vcards_by_uid', 'kdeconnect.findmyphone.request', 'kdeconnect.mousepad.keyboardstate', 'kdeconnect.mousepad.request', 'kdeconnect.mpris', 'kdeconnect.mpris.request', 'kdeconnect.notification', 'kdeconnect.notification.action', 'kdeconnect.notification.reply', 'kdeconnect.notification.request', 'kdeconnect.ping', 'kdeconnect.runcommand', 'kdeconnect.sftp.request', 'kdeconnect.share.request', 'kdeconnect.share.request.update', 'kdeconnect.shareinputdevices.request', 'kdeconnect.sms.request', 'kdeconnect.sms.request_attachment', 'kdeconnect.sms.request_conversation', 'kdeconnect.sms.request_conversations', 'kdeconnect.systemvolume', 'kdeconnect.telephony.request_mute']
+last-connection='lan://10.0.30.19:1716'
+name='Pixel 7'
+outgoing-capabilities=['kdeconnect.battery', 'kdeconnect.clipboard', 'kdeconnect.clipboard.connect', 'kdeconnect.connectivity_report', 'kdeconnect.contacts.response_uids_timestamps', 'kdeconnect.contacts.response_vcards', 'kdeconnect.digitizer', 'kdeconnect.digitizer.session', 'kdeconnect.findmyphone.request', 'kdeconnect.mousepad.echo', 'kdeconnect.mousepad.keyboardstate', 'kdeconnect.mousepad.request', 'kdeconnect.mpris', 'kdeconnect.mpris.request', 'kdeconnect.notification', 'kdeconnect.notification.request', 'kdeconnect.ping', 'kdeconnect.presenter', 'kdeconnect.runcommand.request', 'kdeconnect.sftp', 'kdeconnect.share.request', 'kdeconnect.shareinputdevices', 'kdeconnect.sms.attachment_file', 'kdeconnect.sms.messages', 'kdeconnect.systemvolume.request', 'kdeconnect.telephony']
+paired=true
+supported-plugins=['battery', 'clipboard', 'connectivity_report', 'contacts', 'findmyphone', 'mousepad', 'mpris', 'notification', 'ping', 'presenter', 'runcommand', 'sftp', 'share', 'sms', 'systemvolume', 'telephony']
+type='tablet'
+
+[shell/extensions/gsconnect/device/a8e0ea01153d4d1cad7fad0015e7f07e/plugin/battery]
+custom-battery-notification-value=uint32 80
+full-battery-notification=true
+
+[shell/extensions/gsconnect/device/a8e0ea01153d4d1cad7fad0015e7f07e/plugin/notification]
+applications='{"Printers":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Events and Tasks Reminders":{"iconName":"org.gnome.Evolution-alarm-notify","enabled":true},"Zenity":{"iconName":"application-x-executable","enabled":false},"Snapd User Session Agent":{"iconName":"/usr/share/snapd/snapcraft-logo-bird.svg","enabled":true},"Disks":{"iconName":"org.gnome.DiskUtility","enabled":true},"Software":{"iconName":"org.gnome.Software","enabled":true},"Date & Time":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"Online Accounts":{"iconName":"org.gnome.goa-daemon-symbolic","enabled":true},"Disk Usage Analyzer":{"iconName":"org.gnome.baobab","enabled":true},"Power":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"calibre":{"iconName":"com.calibre_ebook.calibre","enabled":true},"Color Management":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Files":{"iconName":"org.gnome.Nautilus","enabled":true},"Clocks":{"iconName":"org.gnome.clocks","enabled":true}}'
+
+[shell/extensions/gsconnect/device/a8e0ea01153d4d1cad7fad0015e7f07e/plugin/share]
+receive-directory='/home/skrones/Downloads'
+
+[shell/extensions/gsconnect/device/a8e0ea01153d4d1cad7fad0015e7f07e/plugin/telephony]
+ringing-pause=false
+
+[shell/extensions/gsconnect/messaging]
+window-maximized=false
+window-size=(908, 480)
+
+[shell/extensions/gsconnect/preferences]
+window-maximized=false
+window-size=(790, 550)
+
+[shell/extensions/just-perfection]
+panel-in-overview=true
+support-notifier-showed-version=36
+support-notifier-type=0
+theme=false
+
+[shell/extensions/lockscreen-extension]
+background-image-path-1='file:///home/skrones/Pictures/Themes/(162).jpg'
+background-size-1='contain'
+background-size-2='center'
+backgrounds-folder-path='/home/skrones/Pictures/Themes'
+blur-brightness-2=0.65000000000000002
+blur-radius-2=0
+gradient-direction-1='horizontal'
+gradient-direction-2='none'
+primary-color-2='red'
+secondary-color-2='orange'
+user-background-1=false
+user-background-2=true
+
+[shell/extensions/vitals]
+alphabetize=false
+fixed-widths=true
+hide-icons=false
+hide-zeros=true
+icon-style=0
+menu-centered=true
+position-in-panel=2
+show-battery=false
+show-gpu=true
+update-time=1
+use-higher-precision=false
 
 [shell/world-clocks]
 locations=@av []
@@ -198,7 +361,7 @@ locations=@av []
 [software]
 check-timestamp=int64 1780236650
 first-run=false
-flatpak-purge-timestamp=int64 1780196686
+flatpak-purge-timestamp=int64 1780275885
 security-timestamp=int64 1779803485179144
 update-notification-timestamp=int64 1780159342
 
