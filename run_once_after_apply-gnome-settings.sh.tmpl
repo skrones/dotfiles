@@ -2,7 +2,7 @@
 #chezmoi:template:
 set -u
 
-gnome_dconf_file="{{ .chezmoi.homeDir }}/.config/dconf/gnome.dconf"
+gnome_dconf_file="{{ .chezmoi.sourceDir }}/dot_config/dconf/gnome.dconf"
 
 if ! command -v dconf >/dev/null 2>&1; then
 	echo "dconf is not installed or is not in PATH" >&2
