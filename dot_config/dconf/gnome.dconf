@@ -294,7 +294,7 @@ show-indicators=false
 [shell/extensions/gsconnect/device/a8e0ea01153d4d1cad7fad0015e7f07e]
 certificate-pem='-----BEGIN CERTIFICATE-----\nMIIBijCCATGgAwIBAgIBATAKBggqhkjOPQQDBDBPMSkwJwYDVQQDDCBhOGUwZWEw\nMTE1M2Q0ZDFjYWQ3ZmFkMDAxNWU3ZjA3ZTEUMBIGA1UECwwLS0RFIENvbm5lY3Qx\nDDAKBgNVBAoMA0tERTAeFw0yNTA1MzEwNTAwMDBaFw0zNjA1MzEwNTAwMDBaME8x\nKTAnBgNVBAMMIGE4ZTBlYTAxMTUzZDRkMWNhZDdmYWQwMDE1ZTdmMDdlMRQwEgYD\nVQQLDAtLREUgQ29ubmVjdDEMMAoGA1UECgwDS0RFMFkwEwYHKoZIzj0CAQYIKoZI\nzj0DAQcDQgAE2xYYBYgwbuT30/ragSOLwAcTN16AelJLLzKUHAevjXPuNTxr7lWw\nyX13WSR280dUkspfo+RSTr9z/JvaDi6pMjAKBggqhkjOPQQDBANHADBEAiB1gZGz\nrfUv2CI5bSfpl6gXssoZayfmLQnnjTjsel1mNgIgJt0EWw+h2D8FsNVv4+T0Jmu/\nmlJzg7s+m474PZHS0M8=\n-----END CERTIFICATE-----\n'
 incoming-capabilities=['kdeconnect.battery', 'kdeconnect.clipboard', 'kdeconnect.clipboard.connect', 'kdeconnect.contacts.request_all_uids_timestamps', 'kdeconnect.contacts.request_vcards_by_uid', 'kdeconnect.findmyphone.request', 'kdeconnect.mousepad.keyboardstate', 'kdeconnect.mousepad.request', 'kdeconnect.mpris', 'kdeconnect.mpris.request', 'kdeconnect.notification', 'kdeconnect.notification.action', 'kdeconnect.notification.reply', 'kdeconnect.notification.request', 'kdeconnect.ping', 'kdeconnect.runcommand', 'kdeconnect.sftp.request', 'kdeconnect.share.request', 'kdeconnect.share.request.update', 'kdeconnect.shareinputdevices.request', 'kdeconnect.sms.request', 'kdeconnect.sms.request_attachment', 'kdeconnect.sms.request_conversation', 'kdeconnect.sms.request_conversations', 'kdeconnect.systemvolume', 'kdeconnect.telephony.request_mute']
-last-connection='lan://10.0.30.19:1716'
+last-connection='lan://100.99.47.82:1716'
 name='Pixel 7'
 outgoing-capabilities=['kdeconnect.battery', 'kdeconnect.clipboard', 'kdeconnect.clipboard.connect', 'kdeconnect.connectivity_report', 'kdeconnect.contacts.response_uids_timestamps', 'kdeconnect.contacts.response_vcards', 'kdeconnect.digitizer', 'kdeconnect.digitizer.session', 'kdeconnect.findmyphone.request', 'kdeconnect.mousepad.echo', 'kdeconnect.mousepad.keyboardstate', 'kdeconnect.mousepad.request', 'kdeconnect.mpris', 'kdeconnect.mpris.request', 'kdeconnect.notification', 'kdeconnect.notification.request', 'kdeconnect.ping', 'kdeconnect.presenter', 'kdeconnect.runcommand.request', 'kdeconnect.sftp', 'kdeconnect.share.request', 'kdeconnect.shareinputdevices', 'kdeconnect.sms.attachment_file', 'kdeconnect.sms.messages', 'kdeconnect.systemvolume.request', 'kdeconnect.telephony']
 paired=true
@@ -306,7 +306,7 @@ custom-battery-notification-value=uint32 80
 full-battery-notification=true
 
 [shell/extensions/gsconnect/device/a8e0ea01153d4d1cad7fad0015e7f07e/plugin/notification]
-applications='{"Printers":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Events and Tasks Reminders":{"iconName":"org.gnome.Evolution-alarm-notify","enabled":true},"Zenity":{"iconName":"application-x-executable","enabled":false},"Snapd User Session Agent":{"iconName":"/usr/share/snapd/snapcraft-logo-bird.svg","enabled":true},"Disks":{"iconName":"org.gnome.DiskUtility","enabled":true},"Software":{"iconName":"org.gnome.Software","enabled":true},"Date & Time":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"Online Accounts":{"iconName":"org.gnome.goa-daemon-symbolic","enabled":true},"Disk Usage Analyzer":{"iconName":"org.gnome.baobab","enabled":true},"Power":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"calibre":{"iconName":"com.calibre_ebook.calibre","enabled":true},"Color Management":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Files":{"iconName":"org.gnome.Nautilus","enabled":true},"Clocks":{"iconName":"org.gnome.clocks","enabled":true}}'
+applications='{"Printers":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Events and Tasks Reminders":{"iconName":"org.gnome.Evolution-alarm-notify","enabled":true},"Zenity":{"iconName":"application-x-executable","enabled":false},"Snapd User Session Agent":{"iconName":"/usr/share/snapd/snapcraft-logo-bird.svg","enabled":true},"Disks":{"iconName":"org.gnome.DiskUtility","enabled":true},"Software":{"iconName":"org.gnome.Software","enabled":true},"Date & Time":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"Online Accounts":{"iconName":"org.gnome.goa-daemon-symbolic","enabled":true},"Disk Usage Analyzer":{"iconName":"org.gnome.baobab","enabled":true},"Power":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"calibre":{"iconName":"com.calibre_ebook.calibre","enabled":true},"Color Management":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Files":{"iconName":"org.gnome.Nautilus","enabled":true},"Clocks":{"iconName":"org.gnome.clocks","enabled":true},"Code":{"iconName":"","enabled":true}}'
 
 [shell/extensions/gsconnect/device/a8e0ea01153d4d1cad7fad0015e7f07e/plugin/share]
 receive-directory='/home/skrones/Downloads'
@@ -359,11 +359,11 @@ use-higher-precision=false
 locations=@av []
 
 [software]
-check-timestamp=int64 1780236650
+check-timestamp=int64 1780405500
 first-run=false
-flatpak-purge-timestamp=int64 1780275885
+flatpak-purge-timestamp=int64 1780451937
 security-timestamp=int64 1779803485179144
-update-notification-timestamp=int64 1780159342
+update-notification-timestamp=int64 1780405539
 
 [system/location]
 enabled=false
